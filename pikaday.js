@@ -82,7 +82,7 @@
 
     hasClass = function(el, cn)
     {
-        return (' ' + el.className + ' ').indexOf(' ' + cn + ' ') !== -1;
+        return el && (' ' + el.className + ' ').indexOf(' ' + cn + ' ') !== -1;
     },
 
     addClass = function(el, cn)

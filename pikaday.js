@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 /*!
  * Pikaday
  *
@@ -505,7 +507,7 @@
                     return;
                 }
             }
-            while ((pEl = pEl.parentNode));
+            while (pEl && (pEl = pEl.parentNode));
 
             if (!self._c) {
                 self._b = sto(function() {

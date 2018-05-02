@@ -14,7 +14,10 @@
     if (typeof exports === 'object') {
         // CommonJS module
         // Load moment.js as an optional dependency
-        try { moment = require('moment'); } catch (e) {}
+        try {
+          var requireAlias = require;
+          moment = requireAlias('moment');
+        } catch (e) {}
         module.exports = factory(moment);
     } else if (typeof define === 'function' && define.amd) {
         // AMD. Register as an anonymous module.
